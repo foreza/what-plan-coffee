@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Plan Coffee - Menu</title>
+    <style>
+        :root {
+            --primary-dark: #2a2520;
+            --primary-light: #f5f5f0;
+            --accent-warm: #8b6f47;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --border-light: #e0ddd8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--primary-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            color: var(--primary-dark);
+            font-weight: 400;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-top: 8px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #f9f7f3;
+        }
+
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--accent-warm);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-primary);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(139, 111, 71, 0.03);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .notices {
+            background-color: #faf8f5;
+            padding: 8px;
+            border-left: 4px solid var(--accent-warm);
+            margin: 0px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .notices p {
+            margin-bottom: 8px;
+        }
+
+        .notices p:last-child {
+            margin-bottom: 0;
+        }
+
+        .logo-section {
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 2px dashed var(--accent-warm);
+            border-radius: 8px;
+        }
+
+        .logo-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .price {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.85rem;
+            }
+
+            th {
+                font-size: 0.75rem;
+            }
+
+            body {
+                padding: 15px;
+            }
+
+            header {
+                margin-bottom: 25px;
+                padding-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.4rem;
+                letter-spacing: 0.5px;
+            }
+
+            .section-title {
+                font-size: 0.95rem;
+            }
+
+            th, td {
+                padding: 8px 6px;
+                font-size: 0.8rem;
+            }
+
+            th {
+                font-size: 0.7rem;
+            }
+
+            .notices {
+                padding: 15px;
+                font-size: 0.85rem;
+            }
+
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What Plan Coffee</h1>
+        </header>
+
+        <section>
+            <h2 class="section-title">Coffee</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Latte</td>
+                        <td class="center">Two shots of espresso, equal parts steamed milk and foam.</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cappuccino</td>
+                        <td class="center">Have you tried to drink a cloud? (Hot only) </td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Espresso (Double)</td>
+                        <td class="center">"Wow, I know my bitters from my sugars."</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Americano</td>
+                        <td class="center">Technically a long black, but to avoid being cancelled...</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                        <td><b>(Seasonal!)</b> Chai Ni Made</td>
+                        <td class="center">A hot, nasty, <i>filthy</i>  chai. (Has double espresso)</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">Not Coffee</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Matcha Latte</td>
+                        <td class="center">The reason we get a forearm workout.</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Chai Tea Latte</td>
+                        <td class="center">Did you want even more tea with that?</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td><b>(Seasonal!)</b> Just Mine</td>
+                        <td class="center">A jasmine tea latte. May be dangerously cute.</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">Small Bites</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Bagel</td>
+                        <td class="center">The wonders of boiling the bread before baking.</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Mochi Buns</td>
+                        <td class="center">Delectable little chewy creatures.</td>
+                        <td class="price">$0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="notices">
+            <p><strong>*</strong> All drinks made one size only.</p>
+            <p><strong>**</strong> Milk drinks made with lactose free milk (default) or oat milk.</p>
+            <p><strong>***</strong> Feel a bit of rumble in your tummy? Ask your barista for complimentary lactase.</p>
+        </div>
+
+        <div class="logo-section">
+            <div class="logo-placeholder">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/1df0be56-84dc-44b6-acc4-6a1bd5daa583.png" alt="What Plan Coffee Logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
