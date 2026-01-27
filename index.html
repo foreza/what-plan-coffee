@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,9 +123,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #fff;
-            border: 2px dashed var(--accent-warm);
-            border-radius: 8px;
         }
 
         .logo-placeholder img {
@@ -134,7 +131,7 @@
             object-fit: contain;
         }
 
-        .price {
+        .temp {
             text-align: right;
         }
 
@@ -147,7 +144,8 @@
                 font-size: 1.1rem;
             }
 
-            th, td {
+            th,
+            td {
                 padding: 10px 8px;
                 font-size: 0.85rem;
             }
@@ -176,7 +174,8 @@
                 font-size: 0.95rem;
             }
 
-            th, td {
+            th,
+            td {
                 padding: 8px 6px;
                 font-size: 0.8rem;
             }
@@ -196,39 +195,41 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+
+        <div class="logo-section">
+            <div class="logo-placeholder">
+                <img src="https://jasonthechiu.com/what-plan-coffee/whatcatcoffelogo-transp.png"
+                    alt="What Plan Coffee Logo">
+            </div>
+        </div>
+
         <header>
             <h1>What Plan Coffee</h1>
         </header>
+
+
 
         <section>
             <h2 class="section-title">Coffee</h2>
             <table>
                 <tbody>
                     <tr>
-                        <td>Latte</td>
-                        <td class="center">Two shots of espresso, equal parts steamed milk and foam.</td>
-                        <td class="price">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td>Cappuccino</td>
-                        <td class="center">Have you tried to drink a cloud? (Hot only) </td>
-                        <td class="price">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td>Espresso (Double)</td>
-                        <td class="center">"Wow, I know my bitters from my sugars."</td>
-                        <td class="price">$0.00</td>
+                        <td>Latte *</td>
+                        <td class="center">Don't know what to get? <br> Just get this.</td>
+                        <td class="temp">Hot / Iced</td>
                     </tr>
                     <tr>
                         <td>Americano</td>
-                        <td class="center">Technically a long black, but to avoid being cancelled...</td>
-                        <td class="price">$0.00</td>
+                        <td class="center">Espresso + hot water.<br>Italians cannot.</td>
+                        <td class="temp">Hot / Iced</td>
                     </tr>
-                        <td><b>(Seasonal!)</b> Chai Ni Made</td>
-                        <td class="center">A hot, nasty, <i>filthy</i>  chai. (Has double espresso)</td>
-                        <td class="price">$0.00</td>
+                    <tr>
+                        <td><b>(Special!)</b> <br>Chai Ni Made *</td>
+                        <td class="center">A hot, nasty, <i>filthy</i> chai. <br>High Caffeine.</td>
+                        <td class="temp">Hot only</td>
                     </tr>
                 </tbody>
             </table>
@@ -239,19 +240,14 @@
             <table>
                 <tbody>
                     <tr>
-                        <td>Matcha Latte</td>
-                        <td class="center">The reason we get a forearm workout.</td>
-                        <td class="price">$0.00</td>
+                        <td>Iced Tea</td>
+                        <td class="center">A refreshing splash of flavor. <br> Helps you visualize summer.</td>
+                        <td class="temp">Iced only</td>
                     </tr>
                     <tr>
-                        <td>Chai Tea Latte</td>
-                        <td class="center">Did you want even more tea with that?</td>
-                        <td class="price">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td><b>(Seasonal!)</b> Just Mine</td>
-                        <td class="center">A jasmine tea latte. May be dangerously cute.</td>
-                        <td class="price">$0.00</td>
+                        <td><b>(Special!)</b><br>Just Mine * </td>
+                        <td class="center">A green tea latte. <br> Dangerously cute.</td>
+                        <td class="temp">Hot only</td>
                     </tr>
                 </tbody>
             </table>
@@ -262,30 +258,38 @@
             <table>
                 <tbody>
                     <tr>
-                        <td>Bagel</td>
-                        <td class="center">The wonders of boiling the bread before baking.</td>
-                        <td class="price">$0.00</td>
+                        <td>Salt Bread **</td>
+                        <td class="center">Gift from mother yeast. <br> Forged of her rare tears. </td>
                     </tr>
                     <tr>
-                        <td>Mochi Buns</td>
-                        <td class="center">Delectable little chewy creatures.</td>
-                        <td class="price">$0.00</td>
+                        <td>Mochi Buns **</td>
+                        <td class="center">Delectable little beasties. <br> Chews that endlessly delight.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <div class="notices">
-            <p><strong>*</strong> All drinks made one size only.</p>
-            <p><strong>**</strong> Milk drinks made with lactose free milk (default) or oat milk.</p>
-            <p><strong>***</strong> Feel a bit of rumble in your tummy? Ask your barista for complimentary lactase.</p>
-        </div>
-
-        <div class="logo-section">
-            <div class="logo-placeholder">
-                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/1df0be56-84dc-44b6-acc4-6a1bd5daa583.png" alt="What Plan Coffee Logo">
+            <p><strong>* </strong>All milk drinks made with lactose-free milk.</p>
+            <p><strong>** </strong>Feel a rumble in your tummy? Ask your barista for complimentary lactase.</p>
+            <p>Serving delightful fresg coffee from <b>Dune Coffee Roasters</b> in Santa Barbara.</p>
+            <p>Brewing the essence of the Pacific Northwest with <b>Steven Smith Teamaker</b>.</p>
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    <a href="https://www.dunecoffee.com/"><img src="https://www.dunecoffee.com/cdn/shop/files/secondary_tanDune.png?v=1660775115&width=400"
+                        alt="dune_logo"></a>
+                </div>
+                <div class="logo-placeholder">
+                    <a href="https://www.smithtea.com/"> 
+                    <img src="https://www.smithtea.com/cdn/shop/files/Logo.svg?v=1681419591&width=85" alt="smith_logo"></a>
+                </div>
             </div>
         </div>
+
+
+
+
     </div>
 </body>
+
 </html>
