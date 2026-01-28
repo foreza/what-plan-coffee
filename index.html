@@ -49,13 +49,14 @@
         }
 
         .section-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: var(--primary-dark);
-            margin-top: 8px;
-            margin-bottom: 8px;
+            margin-top: 12px;
+            margin-bottom: 10px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 500;
+            letter-spacing: 0.6px;
+            font-weight: 600;
+            padding-bottom: 6px;
         }
 
         table {
@@ -79,11 +80,47 @@
             letter-spacing: 0.3px;
         }
 
+        th:nth-child(1) { width: 22%; }
+        th:nth-child(2) { width: 56%; }
+        th:nth-child(3) { width: 22%; }
+
+        /* Description header: centered above the centered description content (desktop + print) */
+        th:nth-child(2) {
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
         td {
-            width: 33.3%;
             padding: 8px;
             border-bottom: 1px solid var(--border-light);
             color: var(--text-primary);
+        }
+
+        /* 3-column layout: item | description | temp */
+        td:nth-child(1) { width: 22%; }
+        td:nth-child(2) { width: 56%; }
+        td:nth-child(3) { width: 22%; }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+            letter-spacing: 0.02em;
+        }
+
+        /* Small Bites: Item + Description only (no Temp) */
+        .table-bites th:nth-child(1),
+        .table-bites td:nth-child(1) { width: 28%; }
+        .table-bites th:nth-child(2),
+        .table-bites td:nth-child(2) { width: 72%; }
+
+        tbody tr {
+            background-color: #faf9f7;
+        }
+
+        tbody tr td:first-child {
+            padding-left: 12px;
         }
 
         tbody tr:last-child td {
@@ -91,11 +128,18 @@
         }
 
         tbody tr:hover {
-            background-color: rgba(139, 111, 71, 0.03);
+            background-color: #f5f3ef;
         }
 
         .center {
             text-align: center;
+        }
+
+        /* Description column: centered on desktop so it sits in the middle, not hugging the left */
+        table td.center {
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
 
         .notices {
@@ -138,6 +182,18 @@
             justify-content: center;
         }
 
+        /* Top-of-page logo: give it a bit more presence */
+        .logo-hero .logo-placeholder {
+            width: 140px;
+            height: 140px;
+            padding: 10px;
+            box-shadow: 0 2px 20px rgba(42, 37, 32, 0.1);
+        }
+
+        .logo-hero .logo-placeholder img {
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.06));
+        }
+
         .logo-placeholder img {
             max-width: 100%;
             max-height: 100%;
@@ -145,16 +201,22 @@
         }
 
         .temp {
-            text-align: right;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .section-title {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+
+            .logo-hero .logo-placeholder {
+                width: 120px;
+                height: 120px;
             }
 
             th,
@@ -177,14 +239,78 @@
             }
         }
 
+        /* Stack table into cards on narrow screens so descriptions get full width and wrap naturally */
+        @media (max-width: 600px) {
+            thead {
+                display: none;
+            }
+
+            table, tbody, tr, td {
+                display: block;
+            }
+
+            tr {
+                display: flex;
+                flex-wrap: wrap;
+                border-bottom: 1px solid var(--border-light);
+                padding: 10px 0;
+                gap: 4px 0;
+            }
+
+            tbody tr:last-child {
+                border-bottom: none;
+            }
+
+            td {
+                width: auto;
+                padding: 0;
+                border: none;
+                font-size: 0.9rem;
+            }
+
+            td:first-child {
+                flex: 1 1 auto;
+                order: 0;
+                min-width: 0;
+            }
+
+            td.temp {
+                flex: 0 0 auto;
+                order: 0;
+                padding-left: 8px;
+            }
+
+            table td.center {
+                flex: 1 1 100%;
+                order: 1;
+                min-width: 0;
+                padding-top: 4px;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            table {
+                margin-bottom: 24px;
+            }
+        }
+
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.4rem;
+                font-size: 1.65rem;
                 letter-spacing: 0.5px;
             }
 
             .section-title {
-                font-size: 0.95rem;
+                font-size: 1.1rem;
+                margin-top: 8px;
+                margin-bottom: 6px;
+                padding-bottom: 4px;
+            }
+
+            .logo-hero .logo-placeholder {
+                width: 116px;
+                height: 116px;
             }
 
             th,
@@ -241,11 +367,84 @@
             body {
                 background: #fff;
                 color: #1a1a1a;
-                padding: 12px;
+                padding: 8px;
             }
 
             .container {
                 max-width: 100%;
+            }
+
+            /* Smaller logo for print */
+            .logo-hero .logo-placeholder {
+                width: 80px;
+                height: 80px;
+                padding: 6px;
+                box-shadow: none;
+            }
+
+            .logo-section {
+                padding-top: 2px;
+            }
+
+            /* Smaller header for print */
+            h1 {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+
+            header {
+                margin-bottom: 12px;
+            }
+
+            /* Reduced section title spacing */
+            .section-title {
+                font-size: 1.1rem;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                padding-bottom: 3px;
+            }
+
+            /* Reduced section intro spacing */
+            .section-intro {
+                font-size: 0.85rem;
+                margin: -2px 0 8px 0;
+                color: #5a5a5a;
+            }
+
+            /* Reduced table spacing */
+            table {
+                margin-bottom: 15px;
+            }
+
+            /* Reduced header cell padding */
+            th {
+                padding: 6px 8px;
+                font-size: 0.8rem;
+            }
+
+            /* Reduced data cell padding */
+            td {
+                padding: 4px 8px;
+            }
+
+            /* Reduced notices padding */
+            .notices {
+                background: #f9f9f9;
+                border-left-color: #8b6f47;
+                padding: 6px;
+                margin-top: 8px;
+            }
+
+            .notices p {
+                margin-bottom: 4px;
+                font-size: 0.8rem;
+            }
+
+            .menu-footer {
+                margin-top: 0.75rem;
+                padding-top: 0.4rem;
+                font-size: 0.75rem;
+                color: #5a5a5a;
             }
 
             a {
@@ -253,24 +452,8 @@
                 text-decoration: none;
             }
 
-            .notices {
-                background: #f9f9f9;
-                border-left-color: #8b6f47;
-            }
-
-            .section-intro,
-            .menu-footer {
-                color: #5a5a5a;
-            }
-
             tbody tr:hover {
                 background-color: transparent;
-            }
-
-            .menu-footer {
-                margin-top: 1rem;
-                padding-top: 0.5rem;
-                font-size: 0.8rem;
             }
         }
     </style>
@@ -279,7 +462,7 @@
 <body>
     <div class="container">
 
-        <div class="logo-section">
+        <div class="logo-section logo-hero">
             <div class="logo-placeholder">
                 <img src="https://jasonthechiu.com/what-plan-coffee/whatcatcoffelogo-transp.png"
                     alt="What Plan Coffee Logo">
@@ -296,20 +479,27 @@
             <h2 class="section-title">Coffee</h2>
             <p class="section-intro">Serving delightful fresh coffee from Dune Coffee Roasters in Santa Barbara.</p>
             <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Temp</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>Latte *</td>
-                        <td class="center">Don't know what to get? <br> Just get this.</td>
+                        <td class="item-name">Latte *</td>
+                        <td class="center">Don't know what to get? Just get this.</td>
                         <td class="temp">Hot / Iced</td>
                     </tr>
                     <tr>
-                        <td>Americano</td>
-                        <td class="center">Espresso + hot water.<br>Italians cannot.</td>
+                        <td class="item-name">Americano</td>
+                        <td class="center">Espresso + hot water. Italians cannot.</td>
                         <td class="temp">Hot / Iced</td>
                     </tr>
                     <tr>
-                        <td><b>(Special!)</b> <br>Chai Ni Made *</td>
-                        <td class="center">A hot, nasty, <i>filthy</i> chai. <br>High Caffeine.</td>
+                        <td class="item-name"><b>(!!)</b> Chai Ni Made *</td>
+                        <td class="center">A hot, nasty, <i>filthy</i> chai. High Caffeine.</td>
                         <td class="temp">Hot only</td>
                     </tr>
                 </tbody>
@@ -318,17 +508,24 @@
 
         <section>
             <h2 class="section-title">Not Coffee</h2>
-            <p class="section-intro">Brewing the essence of the Pacific Northwest with Steven Smith Teamaker.</p>
+            <p class="section-intro">Brewing tea steeped in the essence of the Pacific Northwest with Steven Smith Teamaker.</p>
             <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Temp</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>Iced Tea</td>
-                        <td class="center">A refreshing splash of flavor. <br> Helps you visualize summer.</td>
+                        <td class="item-name">Iced Tea</td>
+                        <td class="center">A refreshing splash. Helps you taste summer.</td>
                         <td class="temp">Iced only</td>
                     </tr>
                     <tr>
-                        <td><b>(Special!)</b><br>Just Mine * </td>
-                        <td class="center">A green tea latte. <br> Dangerously cute.</td>
+                        <td class="item-name"><b>(!!)</b>Just Mine * </td>
+                        <td class="center">A green tea latte. Dangerously cute.</td>
                         <td class="temp">Hot only</td>
                     </tr>
                 </tbody>
@@ -338,17 +535,21 @@
         <section>
             <h2 class="section-title">Small Bites</h2>
             <p class="section-intro">Baked fresh. Best with a cup.</p>
-            <table>
+            <table class="table-bites">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>Salt Bread **</td>
-                        <td class="center">Gift from mother yeast. <br> Forged of her rare tears. </td>
-                         <td class="temp">-</td>
+                        <td class="item-name">Salt Bread **</td>
+                        <td class="center">Gift from mother yeast. Forged of her rare tears. </td>
                     </tr>
                     <tr>
-                        <td>Mochi Buns **</td>
-                        <td class="center">Delectable little beasties. <br> Chews that endlessly delight.</td>
-                         <td class="temp">-</td>
+                        <td class="item-name">Mochi Buns **</td>
+                        <td class="center">Three delectable little beasties. Chews that endlessly delight.</td>
                     </tr>
                 </tbody>
             </table>
@@ -370,7 +571,7 @@
         </div>
 
         <footer class="menu-footer">
-            <a href="https://whatplancoffee.com">whatplancoffee.com</a>
+            <a href="jasonthechiu.com/what-plan-coffee">jasonthechiu.com/what-plan-coffee</a>
         </footer>
 
     </div>
