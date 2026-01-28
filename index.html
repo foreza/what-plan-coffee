@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Plan Coffee - Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-dark: #2a2520;
             --primary-light: #f5f5f0;
             --accent-warm: #8b6f47;
             --text-primary: #1a1a1a;
-            --text-secondary: #666;
+            --text-secondary: #5a5a5a;
             --border-light: #e0ddd8;
         }
 
@@ -22,7 +25,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--primary-light);
             color: var(--text-primary);
             line-height: 1.6;
@@ -203,6 +206,73 @@
                 padding: 10px;
             }
         }
+
+        .section-intro {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: -4px 0 12px 0;
+            font-weight: 400;
+        }
+
+        .menu-footer {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .menu-footer a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .menu-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+
+            body {
+                background: #fff;
+                color: #1a1a1a;
+                padding: 12px;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            a {
+                color: #1a1a1a;
+                text-decoration: none;
+            }
+
+            .notices {
+                background: #f9f9f9;
+                border-left-color: #8b6f47;
+            }
+
+            .section-intro,
+            .menu-footer {
+                color: #5a5a5a;
+            }
+
+            tbody tr:hover {
+                background-color: transparent;
+            }
+
+            .menu-footer {
+                margin-top: 1rem;
+                padding-top: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -224,6 +294,7 @@
 
         <section>
             <h2 class="section-title">Coffee</h2>
+            <p class="section-intro">Serving delightful fresh coffee from Dune Coffee Roasters in Santa Barbara.</p>
             <table>
                 <tbody>
                     <tr>
@@ -247,6 +318,7 @@
 
         <section>
             <h2 class="section-title">Not Coffee</h2>
+            <p class="section-intro">Brewing the essence of the Pacific Northwest with Steven Smith Teamaker.</p>
             <table>
                 <tbody>
                     <tr>
@@ -265,6 +337,7 @@
 
         <section>
             <h2 class="section-title">Small Bites</h2>
+            <p class="section-intro">Baked fresh. Best with a cup.</p>
             <table>
                 <tbody>
                     <tr>
@@ -284,8 +357,6 @@
         <div class="notices">
             <p><strong>* </strong>All milk drinks made with lactose-free milk.</p>
             <p><strong>** </strong>Feel a rumble in your tummy? Ask your barista for complimentary lactase.</p>
-            <p>Serving delightful fresh coffee from <b>Dune Coffee Roasters</b> in Santa Barbara.</p>
-            <p>Brewing the essence of the Pacific Northwest with <b>Steven Smith Teamaker</b>.</p>
             <div class="logo-section logos-row">
                 <div class="logo-placeholder">
                     <a href="https://www.dunecoffee.com/"><img src="https://www.dunecoffee.com/cdn/shop/files/secondary_tanDune.png?v=1660775115&width=400"
@@ -298,8 +369,9 @@
             </div>
         </div>
 
-
-
+        <footer class="menu-footer">
+            <a href="https://whatplancoffee.com">whatplancoffee.com</a>
+        </footer>
 
     </div>
 </body>
