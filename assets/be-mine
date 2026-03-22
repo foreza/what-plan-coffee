@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be Mine Matcha Latte - Barista Spec Sheet</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #222;
+    line-height: 1.4;
+    font-size: 11pt;
+    background: #fff;
+  }
+  h1 {
+    border-bottom: 3px solid #222;
+    text-transform: uppercase;
+    font-size: 20pt;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 14pt;
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+  }
+  .specs {
+    display: flex;
+    justify-content: space-between;
+    background: #f4f4f4;
+    padding: 15px;
+    border-left: 4px solid #222;
+    margin-bottom: 20px;
+  }
+  .specs div {
+    flex: 1;
+  }
+  .warning {
+    color: #c00;
+    font-weight: bold;
+  }
+  ul, ol {
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  .notes {
+    background: #eef8f2;
+    padding: 15px;
+    border: 1px solid #b2d8c2;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Spec Sheet: "Be Mine" Matcha Latte (8oz)</h1>
+
+  <div class="specs">
+    <div>
+      <strong>Yield:</strong> 1 x 8oz Beverage<br>
+      <strong>Temp Target:</strong> 170&deg;F - 180&deg;F [web:3]<br>
+      <strong>Whisk Time:</strong> ~30 Seconds
+    </div>
+    <div>
+      <strong>Ingredients:</strong><br>
+      - 3.0g Sifted Matcha<br>
+      - 30.0g Water<br>
+      - 1 Pump Yuzu Syrup (Optional)<br>
+      - ~6oz Milk (Whole, 2%, or Lactose-Free)
+    </div>
+  </div>
+
+  <h2>Standard Operating Procedure</h2>
+  <ol>
+    <li><strong>Prep the Whisk:</strong> Fill a cup with hot water and submerge the tines of the bamboo whisk to soften them, which prevents the delicate bamboo from snapping during use [web:16][web:18].</li>
+    <li><strong>Sift &amp; Dose:</strong> Place your bowl on a high-precision coffee scale [web:16]. Sift exactly 3.0g of matcha through a fine mesh sieve into the bowl; skipping this guarantees a gritty, clumpy drink [web:17][web:18].</li>
+    <li><strong>Water Addition:</strong> Tare the scale and pour exactly 30.0g of 170&deg;F-180&deg;F water over the powder.</li>
+    <li><strong>Whisking Technique:</strong> Hold the whisk comfortably and use your wrist—not your arm—to aggressively whisk in a "W" or "M" motion [web:18]. Hover the whisk slightly above the bottom to avoid grinding the tines [web:18]. Whisk for about 30 seconds.</li>
+    <li><strong>Surface Correction:</strong> Slowly lift the whisk toward the surface while continuing the motion to break up any large surface bubbles, leaving behind a smooth microfoam [web:16].</li>
+    <li><strong>Build the Base:</strong> Pour the matcha concentrate and 1 pump of yuzu syrup into the serving cup. <em>Visual cue of a properly done matcha: a smooth, fully suspended liquid with dense microfoam and zero dry powder left in your mixing bowl [web:18].</em></li>
+    <li><strong>Milk Steaming:</strong> Purge your steam wand. Steam your milk in a 12oz pitcher to a wet-paint microfoam texture, identical to flat white/latte art standards.</li>
+    <li><strong>Pour:</strong> Integrate the milk into the matcha base slowly, then drop close to the surface to pour your heart design.</li>
+  </ol>
+
+  <div class="notes">
+    <h2>Professional Pointers &amp; Scaling</h2>
+    <ul>
+      <li><span class="warning">Scaling for Two (16oz total):</span> If you need to make two drinks at once, do not simply double the dose in a small bowl. You must use a large, commercial-width chawan to accommodate 6.0g of matcha and 60.0g of water so the whisk has room to aerate the liquid properly [web:16][web:18]. If your bowl is too small, you must whisk them sequentially.</li>
+      <li><strong>Why Sifting Matters:</strong> Matcha does not dissolve; it suspends in water [web:18]. Un-sifted matcha will instantly lock into dry clumps when water hits it, ruining the texture [web:17][web:18].</li>
+    </ul>
+  </div>
+
+</body>
+</html>
